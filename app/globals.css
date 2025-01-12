@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFFCF6;
+  --foreground: #54321A;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes flyOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  } 
+}
+
+
+
+/* MARKDOWN FORMAT for .botMessage and .botMessageQuiz */
+.botMessageQuiz h1, .botMessage h1 { font-size: 2rem; margin: 0.5rem 0; }
+.botMessageQuiz h2, .botMessage h2 { font-size: 1.5rem; margin: 0.5rem 0; }
+.botMessageQuiz h3, .botMessage h3 { font-size: 1.25rem; margin: 0.5rem 0; }
+.botMessageQuiz h4, .botMessage h4 { font-size: 1.1rem; margin: 0.5rem 0; }
+
+
+.botMessage ul, .botMessage ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+.botMessageQuiz ul, .botMessageQuiz ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+
+/* Unordered List (ul) */
+.botMessage ul,
+.botMessageQuiz ul {
+  list-style-type: disc; /* Default bullet style */
+}
+.botMessage ul ul,
+.botMessageQuiz ul ul {
+  list-style-type: circle; /* Nested bullet style */
+}
+.botMessage ul ul ul,
+.botMessageQuiz ul ul ul {
+  list-style-type: square; /* Third-level bullet style */
+}
+/* Ordered List (ol) */
+.botMessage ol,
+.botMessageQuiz ol {
+  list-style-type: decimal; /* Default ordered list style */
+}
+.botMessage ol ol,
+.botMessageQuiz ol ol {
+  list-style-type: lower-alpha; /* Nested ordered list style */
+}
+.botMessage ol ol ol,
+.botMessageQuiz ol ol ol {
+  list-style-type: lower-roman; /* Third-level ordered list style */
+}
+
+/* BlockQuote */
+.botMessage blockquote,
+.botMessageQuiz blockquote {
+  padding: 1rem; /* Add spacing inside the blockquote */
+  border-left: 4px solid; /* Create a vertical bar on the left */
+  margin: 1rem 0; /* Add spacing around blockquote */
+  font-style: italic; /* Optional: Italicize the text */
+}
+.botMessage blockquote blockquote,
+.botMessageQuiz blockquote blockquote {
+  padding: 0.8rem; /* Slightly smaller padding */
+  border-left: 4px solid; /* Same width for nested blockquote */
+  margin: 0.8rem 0; /* Adjust margin for nested blockquote */
+}
+
+/* Bot Message Quiz (Dark Background, Light Text) */
+
+.botMessageQuiz h1, .botMessageQuiz h2, .botMessageQuiz h3 {
+  color: #fff; /* Light text for headings */
+}
+
+.botMessageQuiz a { color: #66ccff; text-decoration: underline; }
+.botMessage a { color: #0066cc; text-decoration: underline; }
+
+
+.botMessageQuiz table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0;
+  border: 1px solid #C1A999;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.botMessage table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0;
+  border: 1px solid #9A705C;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.botMessageQuiz table th,
+.botMessageQuiz table td {
+  border: 1px solid #C1A999;
+  padding: 0.5rem;
+}
+.botMessage table th,
+.botMessage table td {
+  border: 1px solid #9A705C;
+  padding: 0.5rem;
+}
+
+.botMessageQuiz table th {
+  background-color: #9A705C;
+  font-weight: bold;
+}
+.botMessage table th {
+  background-color: #F0E6DE;
+  font-weight: bold;
+}
+
+.botMessageQuiz pre {
+  border: 1.5px solid #C1A999;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+}
+.botMessage pre {
+  border: 1.5px solid #9A705C;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+}
